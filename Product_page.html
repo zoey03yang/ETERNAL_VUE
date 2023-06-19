@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eternal</title>
+    <link rel="icon" href="logo_title.ico" type="image/x-icon" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+    <script src="https://yourwebsite.com/script.js"></script>
+    <link rel="stylesheet" href="product_page_style.css">
+</head>
+<body>
+    <input type="checkbox" name="" id="menu_control">
+    <header class="eternal_header">
+        <h1 class="eternal_logo">
+            <a href="index.html">
+                <img src="logo.png" alt="eternal_logo">
+            </a>
+        </h1>
+        <label for="menu_control" class="menu_btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav id="rwd_menu">
+            <div class="eternal_search">
+                <span class="search_icon"><i class="fa-solid fa-magnifying-glass" style="color: #16161a;"></i></span>
+                <input type="search" id="search" placeholder="Search搜尋">
+            </div>
+            <a href="shop_all.html">所有商品</a>
+            <a href="shop_all.html">最新商品</a>
+            <a href="shop_all.html">熱銷商品</a>
+            <a href="login.html">會員登入</a>
+            <a href="shopping_bag.html">購物車</a>
+        </nav>
+        <nav class="top_nav">
+            <div class="main_menu">
+                <div class="shop_all">
+                    <h2 class="text_shop">
+                        <a data-hover="ALL" href="shop_all.html">
+                        所有商品
+                        </a>
+                    </h2>
+                    <div class="Classification">
+                        <h3 class="Classification_button">
+                            <a href ="shop_all.html">上身類</a>
+                        </h3>
+                        <h3 class="Classification_button">
+                            <a href="shop_all.html">下身類</a>
+                        </h3>
+                        <h3 class="Classification_button">
+                            <a href="shop_all.html">連身類</a>
+                        </h3>
+                        <h3 class="Classification_button">
+                            <a href="shop_all.html">配飾</a>
+                        </h3>
+                        <h3 class="Classification_button">
+                            <a href="shop_all.html">風格支線</a>
+                        </h3>
+                        <h3 class="Classification_button">
+                            <a href="shop_all.html">優惠活動</a>
+                        </h3>
+                    </div>
+                </div>
+                <div class="new_arrival">
+                    <h2 class="text_new">
+                        <a data-hover="NEW" href="shop_all.html">
+                            最新商品
+                        </a>
+                    </h2>
+                </div>
+                <div class="restock">
+                    <h2 class="text_restock">
+                        <a data-hover="RESTOCK" href="shop_all.html">
+                            熱銷商品
+                        </a>
+                    </h2>
+                </div>
+            </div> 
+        </nav>
+        <div class="header_box">
+            <div class="eternal_search">
+                <span class="search_icon"><i class="fa-solid fa-magnifying-glass" style="color: #16161a;"></i></span>
+                <input type="search" id="search" placeholder="Search搜尋">
+            </div>
+            <div class="member">
+                <a href="login.html"><img src="icon/user.png" alt="member"></a>
+            </div>
+            <div class="shopping_bag">
+                <a href="shopping_bag.html"><img src="icon/shopping_bag.png" alt="shopping_bag"></a>
+            </div>
+        </div>
+    </header>
+    <section class="product_page">
+        <div class="product_carousel">          
+            <div class="slider single-item slick_wrap">
+                <div class="product_pic">
+                    <img src="images/product_row_01_01.jpg" alt="">
+                </div>
+                <div class="product_pic">
+                    <img src="images/product_row_01_01_01.jpg" alt="">
+                </div>
+                <div class="product_pic">
+                    <img src="images/product_row_01_01_02.jpg" alt="">
+                </div>
+                <div class="product_pic">
+                    <img src="images/product_row_01_01_03.jpg" alt="">
+                </div>
+                <div class="product_pic">
+                    <img src="images/product_row_01_01_04.jpg" alt="">
+                </div>
+                <div class="product_pic">
+                    <img src="images/product_row_01_01_05.jpg" alt="">
+                </div>
+            </div>
+            <script>
+                $(".single-item").slick({
+                dot: false,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                vertical: true,
+                verticalSwiping: true,
+                swipe: true,
+                swipeToSlide: true,
+                touchMove: true,
+                arrows: true
+                });
+            </script>
+        </div>
+        <div class="product_carousel_rwd">          
+            <div class="slider single-item01 slick_wrap">
+                <div class="product_pic">
+                    <img src="images/product_row_01_01.jpg" alt="">
+                </div>
+                <div class="product_pic">
+                    <img src="images/product_row_01_01_01.jpg" alt="">
+                </div>
+                <div class="product_pic">
+                    <img src="images/product_row_01_01_02.jpg" alt="">
+                </div>
+                <div class="product_pic">
+                    <img src="images/product_row_01_01_03.jpg" alt="">
+                </div>
+                <div class="product_pic">
+                    <img src="images/product_row_01_01_04.jpg" alt="">
+                </div>
+                <div class="product_pic">
+                    <img src="images/product_row_01_01_05.jpg" alt="">
+                </div>
+            </div>
+            <script>
+                $(".single-item01").slick({
+                dot: false,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                vertical: true,
+                verticalSwiping: true,
+                swipe: true,
+                swipeToSlide: true,
+                touchMove: true,
+                arrows: true
+                });
+            </script>
+        </div>
+        <div class="product_about">
+            <div class="product_name_price">
+                <span class="product_name">品牌經典西裝外套</span>
+                <span class="product_price">NT. 1,800 </span>
+            </div>
+            <div class="product_color">
+                <a href="#">
+                    <button class="color_btn_grey"></button>
+                </a>
+                <a href="#">
+                    <button class="color_btn_black"></button>
+                </a>
+            </div>
+            <div class="product_size">
+                <a href="#">
+                    <button class="size_btn">S</button>
+                </a>
+                <a href="#">
+                    <button class="size_btn">M</button>
+                </a>
+                <a href="#">
+                    <button class="size_btn">L</button>
+                </a>
+            </div>
+            <div class="p_quantity">
+                <input type="button" class="decrease" value="-">
+                <input type="text" class="quantity" value="1"/>
+                <input type="button" class="increase" value="+">
+         </div>
+            <script>
+            //获取所有+按钮
+            var increment = document.getElementsByClassName("increase");
+
+            for (var i = 0; i < increment.length; i++) {
+                //为a标签添加index属性，用于记录下标
+                increment[i].index = i;
+
+                //点击+数量增加的功能函数
+                increment[i].onclick = function () {
+                    var flag = this.index;
+
+                    //获取当前按钮对应的数量框
+                    var q = document.getElementsByClassName("quantity")[flag];
+
+                    var newvalue = parseInt(q.value) + 1;
+
+                    q.setAttribute('value', newvalue);
+
+                    //更新此商品对应的‘小计’
+                    changeSum(flag, newvalue);
+                }
+            }
+            //获取所有-按钮
+                var decrement=document.getElementsByClassName('decrease');
+
+                //点击-数量减少的功能函数
+                for(var j=0;j<decrement.length;j++)
+                {
+                    decrement[j].index=j;
+
+                    decrement[j].onclick=function()
+                    {
+                        var flag=this.index;
+                        //获取当前a标签对应的那个数量框
+                    var q=document.getElementsByClassName("quantity")[flag];
+
+                    if(parseInt(q.value)>1)
+                    {
+                        var newvalue=parseInt(q.value)-1;
+
+                        q.setAttribute('value',newvalue);
+
+                        changeSum(flag,newvalue);
+                    }
+                    }
+                }
+            //更新每个商品的‘小计’
+            function changeSum(flag, num) {
+                //获取对应商品单价所在的标签
+                var temp = document.getElementsByClassName("onlyPrice")[flag];
+
+                //获取商品单价
+                var unitPrice = temp.innerHTML;
+
+                //计算新的小计价格
+                var newPrice = (parseFloat(unitPrice) * (num*1.0)).toFixed(1);
+                //获取当前“小计”的标签
+                var sum = document.getElementsByClassName("onlySum")[flag];
+
+                sum.innerHTML = newPrice;
+            }
+            </script>
+            <div class="shopping_button">
+                <input type="submit" class="buy_now" value="BUY NOW">
+                <input type="submit" class="add_to_bag" value="ADD TO BAG">
+            </div>
+            <div class="product_desciption">
+                <div class="product_desciption_menu">
+                    <div class="product_information">
+                        <button class="product_information_btn btn_opening" aria-current="page">
+                            <h4 class="product_information_title">商品資訊</h4>
+                        </button>
+                        <div class="product_information_about  product_guide ">
+                            此款版型寬鬆<br>
+
+                            附不可拆墊肩/後片下擺雙開岔造型/附內裡/袖口釦子不可打開/胸前假口袋造型/前片兩側袋蓋式真口袋<br>
+                            
+                            *實品顏色依單品照為主<br>
+                            
+                            主布:聚酯纖維 96% 彈性纖維 4% 裡布:聚酯纖維 100%<br>
+                            厚薄:適中<br>
+                            彈性:無<br>
+                            
+                            素材產地 / 台灣<br>
+                            
+                            加工產地 / 台灣<br>
+                        </div>
+                        <div class="product_laundry_guide product_guide product_opening">
+                            1.深淺色請分開洗滌，以避免造成互相移染。<br>
+
+                            2.請採低溫手洗，以保持商品型態。<br>
+                            
+                            3.洗滌時，水溫請低於30℃，勿大力搓揉；請使用中性洗劑；請勿浸泡。<br>
+                            
+                            4.請勿使用漂白劑、螢光增白劑及衣物柔軟劑，以免破壞布料。<br>
+                            
+                            5.清洗後請快速調整商品型態並平放陰乾即可，不可擰扭，勿直接曝曬於陽光下<br>
+                            
+                            6.此類商品不可熨燙。<br>
+                        </div>
+                        <div class="product_size_guide product_guide">
+                            <table>
+                                <tbody>
+                                <tr>
+                                <th>&nbsp;尺寸</th>
+                                <td>&nbsp;S</td>
+                                <td>&nbsp;M</td>
+                                <td>&nbsp;L</td>
+                                </tr>
+                                <tr>
+                                <th>&nbsp;肩寬</th>
+                                <td>&nbsp;40 cm</td>
+                                <td>&nbsp;41 cm</td>
+                                <td>&nbsp;42 cm</td>
+                                </tr>
+                                <tr>
+                                <th>&nbsp;胸圍</th>
+                                <td>&nbsp;100.5 cm</td>
+                                <td>&nbsp;104.5 cm</td>
+                                <td>&nbsp;108.5 cm</td>
+                                </tr>
+                                <tr>
+                                <th>&nbsp;袖長</th>
+                                <td>&nbsp;18.5 cm</td>
+                                <td>&nbsp;19 cm</td>
+                                <td>&nbsp;19.5 cm</td>
+                                </tr>
+                                <tr>
+                                <th>&nbsp;長度</th>
+                                <td>&nbsp;62 cm</td>
+                                <td>&nbsp;63 cm</td>
+                                <td>&nbsp;64 cm</td>
+                                </tr>
+                                <tr>
+                                <th>&nbsp;袖口</th>
+                                <td>&nbsp;34.5 cm</td>
+                                <td>&nbsp;35.5 cm</td>
+                                <td>&nbsp;36.5 cm</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="product_information">
+                        <button class="product_information_btn">
+                            <h4 class="product_information_title">洗滌方式</h4>
+                        </button>
+                    </div>
+                    <div class="product_information">
+                        <button class="product_information_btn">
+                            <h4 class="product_information_title">尺寸指南</h4>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <script>
+                let product_information_about = document.querySelectorAll(".product_information_btn")
+                let product_laundry_guide = document.querySelectorAll(".product_guide")
+                let arr = [...product_information_about]
+                for (let i of arr){
+                    i.addEventListener("click",function(){
+                        for(let q = 0 ;q < product_laundry_guide.length; q++){
+                            product_laundry_guide[q].classList.remove("product_opening") 
+                            product_information_about[q].classList.remove("btn_opening")                         
+                        }
+                        let w = arr.indexOf(this)
+                        product_laundry_guide[w].classList.add("product_opening")
+                        product_information_about[w].classList.add("btn_opening")
+
+                    })
+                }
+            </script>
+            <div class="background">
+                <img src="images/background_image_flower_3.png" alt="">
+            </div>
+        </div>
+    </section>
+    <aside class="related_products">
+        <h3 class="related_products_title">相關商品</h3>
+        <main>
+            <div id="carousel">        
+                <div class="hideLeft">
+                    <a href="#">
+                        <img src="images/related_products01.jpg">
+                    </a>
+                </div>       
+                <div class="prevLeftSecond">
+                    <a href="#">
+                        <img src="images/related_products02.jpg">
+                    </a>
+                </div>        
+                <div class="prev">
+                    <a href="#">
+                        <img src="images/related_products03.jpg">
+                    </a>
+                </div>       
+                <div class="selected">
+                    <a href="#">
+                        <img src="images/related_products04.jpg">   
+                    </a>
+                </div>       
+                <div class="next">
+                    <a href="#">
+                        <img src="images/related_products05.jpg">
+                    </a>
+                </div>        
+                <div class="nextRightSecond">
+                    <a href="#">
+                        <img src="images/related_products06.jpg">
+                    </a>
+                </div>        
+                <div class="hideRight">
+                    <a href="#">
+                        <img src="images/related_products07.jpg">
+                    </a>
+                </div>        
+            </div>        
+            <div class="buttons">
+                <button id="prev">Prev</button>
+                <button id="next">Next</button>
+            </div>       
+        </main>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script>
+            function moveToSelected(element) {
+
+            if (element == "next") {
+            var selected = $(".selected").next();
+            } else if (element == "prev") {
+            var selected = $(".selected").prev();
+            } else {
+            var selected = element;
+            }
+
+            var next = $(selected).next();
+            var prev = $(selected).prev();
+            var prevSecond = $(prev).prev();
+            var nextSecond = $(next).next();
+
+            $(selected).removeClass().addClass("selected");
+
+            $(prev).removeClass().addClass("prev");
+            $(next).removeClass().addClass("next");
+
+            $(nextSecond).removeClass().addClass("nextRightSecond");
+            $(prevSecond).removeClass().addClass("prevLeftSecond");
+
+            $(nextSecond).nextAll().removeClass().addClass('hideRight');
+            $(prevSecond).prevAll().removeClass().addClass('hideLeft');
+
+            }
+
+            // Eventos teclado
+            $(document).keydown(function(e) {
+            switch(e.which) {
+                case 37: // left
+                moveToSelected('prev');
+                break;
+
+                case 39: // right
+                moveToSelected('next');
+                break;
+
+                default: return;
+            }
+            e.preventDefault();
+            });
+
+            $('#carousel div').click(function() {
+            moveToSelected($(this));
+            });
+
+            $('#prev').click(function() {
+            moveToSelected('prev');
+            });
+
+            $('#next').click(function() {
+            moveToSelected('next');
+            });
+        </script>
+    </aside>
+    <footer class="eternal_footer">
+        <nav class="button_nav">
+            <ul class="information_menu">
+                <li class="how_to_buy">
+                    <a href="how_to_buy.html">
+                        <span class="text_how_to_buy">HOW TO BUY</span>
+                    </a>
+                </li>
+                <li class="notice">
+                    <a href="#">
+                        <span class="text_notice">NOTICE</span>
+                    </a>
+                </li>
+                <li class="about_eternal">
+                    <a href="about.html">
+                        <span class="text_about_eternal">ABOUT ETERNAL</span>
+                    </a>
+                </li>
+                <li class="facebook">
+                    <a href="#">
+                        <span class="text_facebook">FACEBOOK</span>
+                    </a>
+                </li>
+                <li class="instagram">
+                    <a href="#">
+                        <span class="text_instagram">INSTAGRAM</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="button_tag">
+            <span class="copyright">©ETERNAL 2023</span>
+        </div>
+    </footer>
+</body>

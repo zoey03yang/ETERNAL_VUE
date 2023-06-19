@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eternal</title>
+    <link rel="icon" href="logo_title.ico" type="image/x-icon" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="shopping_bag_style.css">
+</head>
+<body>
+    <input type="checkbox" name="" id="menu_control">
+    <header class="eternal_header">
+        <h1 class="eternal_logo">
+            <a href="index.html">
+                <img src="logo.png" alt="eternal_logo">
+            </a>
+        </h1>
+        <label for="menu_control" class="menu_btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav id="rwd_menu">
+            <div class="eternal_search">
+                <span class="search_icon"><i class="fa-solid fa-magnifying-glass" style="color: #16161a;"></i></span>
+                <input type="search" id="search" placeholder="Search搜尋">
+            </div>
+            <a href="shop_all.html">所有商品</a>
+            <a href="shop_all.html">最新商品</a>
+            <a href="shop_all.html">熱銷商品</a>
+            <a href="login.html">會員登入</a>
+            <a href="shopping_bag.html">購物車</a>
+        </nav>
+        <nav class="top_nav">
+            <div class="main_menu">
+                <div class="shop_all">
+                    <h2 class="text_shop">
+                        <a data-hover="ALL" href="shop_all.html">
+                        所有商品
+                        </a>
+                    </h2>
+                    <div class="Classification">
+                        <h3 class="Classification_button">
+                            <a href ="shop_all.html">上身類</a>
+                        </h3>
+                        <h3 class="Classification_button">
+                            <a href="shop_all.html">下身類</a>
+                        </h3>
+                        <h3 class="Classification_button">
+                            <a href="shop_all.html">連身類</a>
+                        </h3>
+                        <h3 class="Classification_button">
+                            <a href="shop_all.html">配飾</a>
+                        </h3>
+                        <h3 class="Classification_button">
+                            <a href="shop_all.html">風格支線</a>
+                        </h3>
+                        <h3 class="Classification_button">
+                            <a href="shop_all.html">優惠活動</a>
+                        </h3>
+                    </div>
+                </div>
+                <div class="new_arrival">
+                    <h2 class="text_new">
+                        <a data-hover="NEW" href="shop_all.html">
+                            最新商品
+                        </a>
+                    </h2>
+                </div>
+                <div class="restock">
+                    <h2 class="text_restock">
+                        <a data-hover="RESTOCK" href="shop_all.html">
+                            熱銷商品
+                        </a>
+                    </h2>
+                </div>
+            </div> 
+        </nav>
+        <div class="header_box">
+            <div class="eternal_search">
+                <span class="search_icon"><i class="fa-solid fa-magnifying-glass" style="color: #16161a;"></i></span>
+                <input type="search" id="search" placeholder="Search搜尋">
+            </div>
+            <div class="member">
+                <a href="login.html"><img src="icon/user.png" alt="member"></a>
+            </div>
+            <div class="shopping_bag">
+                <a href="shopping_bag.html"><img src="icon/shopping_bag.png" alt="shopping_bag"></a>
+            </div>
+        </div>
+    </header>
+    <section class="shopping_bag_page">
+        <div class="shopping_all">
+            <div class="shopping_product">
+                <div class="product_pic">
+                    <a href="Product_page.html">
+                        <img src="images/product_row_02_04.jpg">
+                    </a>
+                </div>
+                <div class="product_name_about_price">
+                    <div class="product_box">
+                        <h4 class="product_name">微皺百搭款休閒襯衫</h4>
+                        <span class="cancel_icon"><i class="fa-sharp fa-solid fa-circle-xmark" style="color: #504a59;"></i></span>
+                    </div>
+                    <div class="product_about">
+                        <span>顏色 白</span>
+                        <span>尺寸 M</span>
+                        <div class="product_quantity">
+                            <span>數量</span>
+                            <select class="quantity" name="number">
+                                <option value="1" selected>1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p class="product_price">小計 NT.1,600</p>
+                </div>
+            </div>
+            <div class="shopping_product">
+                <div class="product_pic">
+                    <a href="Product_page.html">
+                        <img src="images/product_row_03_01.jpg">
+                    </a>
+                </div>
+                <div class="product_name_about_price">
+                    <div class="product_box">
+                        <h4 class="product_name">經典抓皺絲滑長洋裝</h4>
+                        <span class="cancel_icon"><i class="fa-sharp fa-solid fa-circle-xmark" style="color: #504a59;"></i></span>
+                    </div>
+                    <div class="product_about">
+                        <span>顏色 深藍</span>
+                        <span>尺寸 S</span>
+                        <div class="product_quantity">
+                            <span>數量</span>
+                            <select class="quantity" name="number">
+                                <option value="1" selected>1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p class="product_price">小計 NT.3,800</p>
+                </div>
+            </div>
+            <div class="shopping_product">
+                <div class="product_pic">
+                    <a href="Product_page.html">
+                        <img src="images/product_row_03_04.jpg">
+                    </a>
+                </div>
+                <div class="product_name_about_price">
+                    <div class="product_box">
+                        <h4 class="product_name">修身典雅短洋裝</h4>
+                        <span class="cancel_icon"><i class="fa-sharp fa-solid fa-circle-xmark" style="color: #504a59;"></i></span>
+                    </div>
+                    <div class="product_about">
+                        <span>顏色 米白</span>
+                        <span>尺寸 M</span>
+                        <div class="product_quantity">
+                            <span>數量</span>
+                            <select class="quantity" name="number">
+                                <option value="1" selected>1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p class="product_price">小計 NT.3,200</p>
+                </div>
+            </div>
+            <div class="shopping_product">
+                <div class="product_pic">
+                    <a href="Product_page.html">
+                        <img src="images/product_row_03_03.jpg">
+                    </a>
+                </div>
+                <div class="product_name_about_price">
+                    <div class="product_box">
+                        <h4 class="product_name">貼膚薄紗夢境洋裝</h4>
+                        <span class="cancel_icon"><i class="fa-sharp fa-solid fa-circle-xmark" style="color: #504a59;"></i></span>
+                    </div>
+                    <div class="product_about">
+                        <span>顏色 膚</span>
+                        <span>尺寸 S</span>
+                        <div class="product_quantity">
+                            <span>數量</span>
+                            <select class="quantity" name="number">
+                                <option value="1" selected>1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p class="product_price">小計 NT.4,200</p>
+                </div>
+            </div>
+        </div>
+        <div class="checkout">
+            <div class="checkout_item">
+                <div class="checkout_mode">
+                    <span class="mode_name">電子折價卷</span>
+                    <select class="choose">
+                        <option selected>Tuesday</option>
+                        <option>happy</option>
+                        <option>sadmonday</option>
+                        <option>Wednesday</option>
+                        <option>Saturday</option>
+                    </select>
+                </div>
+                <div class="checkout_mode">
+                    <span class="mode_name">配送區域</span>
+                    <select class="choose">
+                        <option selected>台灣本島及離島 Taiwan</option>
+                        <option>中國大陸 China</option>
+                        <option>香港SAR HongKong SAR</option>
+                        <option>澳門SAR Macao SAR</option>
+                        <option>日本 Japan</option>
+                        <option>新加坡 Singapore</option>
+                        <option>馬來西亞 Malaysia</option>
+                    </select>
+                </div>
+                <div class="checkout_mode">
+                    <span class="mode_name">付款方式</span>
+                    <select class="choose">
+                        <option selected>信用卡線上刷卡</option>
+                        <option>貨到付款(宅配)</option>
+                        <option>貨到付款(超商)</option>
+                        <option>Apple Pay</option>
+                        <option>Line Pay</option>
+                    </select>
+                </div>
+                <div class="checkout_mode">
+                    <span class="mode_name">運送方式</span>
+                    <select class="choose">
+                        <option selected>全家取貨付款</option>
+                        <option>7-11取貨付款</option>
+                        <option>宅配</option>
+                    </select>
+                </div>
+                <div class="supermarket_chose">
+                    <span class="supermarket_name">
+                        012869 全家新竹金竹店 :<br>
+                        新竹市北區金竹路115號1樓
+                    </span>
+                    <a href="#">
+                        <button class="supermarket_chose_btn">選擇超商</button>
+                    </a>
+                </div>
+                <div class="price_sum">
+                    <div class="product_sum">
+                        <span>商品總金額</span>
+                        <span>NT. 12,800</span>
+                    </div>
+                    <div class="product_sum">
+                        <span>電子折價卷</span>
+                        <span>NT. 500</span>
+                    </div>
+                    <div class="product_sum">
+                        <span>運費</span>
+                        <span>NT. 60</span>
+                    </div>
+                </div>
+                <div class="price_total">
+                    <span>總金額</span>
+                    <span>NT. 13,360</span>
+                </div>
+                <div class="next">
+                    <button class="checkout_next">NEXT</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="eternal_footer">
+        <nav class="button_nav">
+            <ul class="information_menu">
+                <li class="how_to_buy">
+                    <a href="how_to_buy.html">
+                        <span class="text_how_to_buy">HOW TO BUY</span>
+                    </a>
+                </li>
+                <li class="notice">
+                    <a href="#">
+                        <span class="text_notice">NOTICE</span>
+                    </a>
+                </li>
+                <li class="about_eternal">
+                    <a href="about.html">
+                        <span class="text_about_eternal">ABOUT ETERNAL</span>
+                    </a>
+                </li>
+                <li class="facebook">
+                    <a href="#">
+                        <span class="text_facebook">FACEBOOK</span>
+                    </a>
+                </li>
+                <li class="instagram">
+                    <a href="#">
+                        <span class="text_instagram">INSTAGRAM</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="button_tag">
+            <span class="copyright">©ETERNAL 2023</span>
+        </div>
+    </footer>
+</body>
