@@ -99,142 +99,36 @@
         </header>
         <section class="shop_all_page">
             <nav class="shop_all_nav">
-                <div class="large_category">
-                    <a href="#">
-                        <h3 class="nav_category">上身類</h3>
+                <div class="large_category" v-for="TypesListTitle in TypesList" :key="">
+                    <a :href="TypesList.url">
+                        <h3 class="nav_category">{{TypesListTitle.title}}</h3>
                     </a>
                     <div class="nav_category_Details">
-                        <a href="#">無袖</a>
-                        <a href="#">短袖</a>
-                        <a href="#">長袖</a>
-                        <a href="#">襯衫</a>
-                        <a href="#">外套</a>
-                    </div>
-                </div>
-                <div class="large_category">
-                    <a href="#">
-                        <h3 class="nav_category">下身類</h3>
-                    </a>
-                    <div class="nav_category_Details">
-                        <a href="#">短裙</a>
-                        <a href="#">長裙</a>
-                        <a href="#">短褲</a>
-                        <a href="#">長褲</a>
-                        <a href="#">牛仔褲</a>
-                    </div>
-                </div>
-                <div class="large_category">
-                    <a href="#">
-                        <h3 class="nav_category">連身類</h3>
-                    </a>
-                    <div class="nav_category_Details">
-                        <a href="#">洋裝</a>
-                        <a href="#">連身褲</a>
-                        <a href="#">泳裝</a>
-                    </div>
-                </div>
-                <div class="large_category">
-                    <a href="#">
-                        <h3 class="nav_category">配飾</h3>
-                    </a>
-                    <div class="nav_category_Details">
-                        <a href="#">耳環</a>
-                        <a href="#">首飾</a>
-                        <a href="#">戒指</a>
-                        <a href="#">髮飾</a>
-                        <a href="#">帽子</a>
-                    </div>
-                </div>
-                <div class="large_category">
-                    <a href="#">
-                        <h3 class="nav_category">風格支線</h3>
-                    </a>
-                    <div class="nav_category_Details">
-                        <a href="#">法國旅拍系列</a>
-                        <a href="#">居家休閒系列</a>
-                        <a href="#">電影聯名系列</a>
-                    </div>
-                </div>
-                <div class="large_category">
-                    <a href="#">
-                        <h3 class="nav_category">優惠活動</h3>
-                    </a>
-                    <div class="nav_category_Details">
-                        <a href="#">新品95折</a>
-                        <a href="#">兩件$798</a>
-                        <a href="#">三件7折</a>
+                        <a :href="types.url" v-for="types in TypesListTitle.productTypes" :key="index">{{types.linkName}}</a>
                     </div>
                 </div>
             </nav>
             <nav class="shop_all_nav_rwd">
                 <div class="large_category_rwd_tab" id="category_rwd_tab">
-                    <a href="#">
-                        <h3 class="nav_category_rwd">上身類</h3>
-                    </a>
-                    <a href="#">
-                        <h3 class="nav_category_rwd">下身類</h3>
-                    </a>
-                    <a href="#">
-                        <h3 class="nav_category_rwd">連身類</h3>
-                    </a>
-                    <a href="#">
-                        <h3 class="nav_category_rwd">配飾</h3>
-                    </a>
-                    <a href="#">
-                        <h3 class="nav_category_rwd">風格支線</h3>
-                    </a>
-                    <a href="#">
-                        <h3 class="nav_category_rwd">優惠活動</h3>
+                    <a :href="type_RWD.url" v-for="type_RWD in TypesList_RWD " :key="">
+                        <h3 class="nav_category_rwd">{{type_RWD.name}}</h3>
                     </a>
                 </div>
                 <div id="category_details_rwd">
-                    <div class="category_details">
-                        <a href="#">無袖</a>
-                        <a href="#">短袖</a>
-                        <a href="#">長袖</a>
-                        <a href="#">襯衫</a>
-                        <a href="#">外套</a>
-                    </div>
-                    <div class="category_details">
-                        <a href="#">短裙</a>
-                        <a href="#">長裙</a>
-                        <a href="#">短褲</a>
-                        <a href="#">長褲</a>
-                        <a href="#">牛仔褲</a>
-                    </div>
-                    <div class="category_details">
-                        <a href="#">洋裝</a>
-                        <a href="#">連身褲</a>
-                        <a href="#">泳裝</a>
-                    </div>
-                    <div class="category_details">
-                        <a href="#">耳環</a>
-                        <a href="#">首飾</a>
-                        <a href="#">戒指</a>
-                        <a href="#">髮飾</a>
-                        <a href="#">帽子</a>
-                    </div>
-                    <div class="category_details">
-                        <a href="#">法國旅拍系列</a>
-                        <a href="#">居家休閒系列</a>
-                        <a href="#">電影聯名系列</a>
-                    </div>
-                    <div class="category_details">
-                        <a href="#">新品95折</a>
-                        <a href="#">兩件$798</a>
-                        <a href="#">三件7折</a>
+                    <div class="category_details" v-for="list in TypesList_RWD" :key="">
+                        <a :href="item.url" v-for="item in  list.productTypes" :key="">{{item.linkName}}</a>
                     </div>
                 </div>
                 <script>
-                    $(document).ready(function(){
-                        $('.nav_category_rwd').click(function(e){
+                    $(document).ready(function () {
+                        $('.nav_category_rwd').click(function (e) {
                             index = $(this).parent().index();
-                            $('#category_details_rwd .category_details.active').removeClass('active').fadeOut(function(){
+                            $('#category_details_rwd .category_details.active').removeClass('active').fadeOut(function () {
                                 $('#category_details_rwd .category_details').eq(index).fadeIn().addClass('active');
                             });
                         });
-        
-                       $('#category_details_rwd .category_details').hide().first().show().addClass('active');
+    
+                        $('#category_details_rwd .category_details').hide().first().show().addClass('active');
                     })
                 </script>
             </nav>
@@ -442,6 +336,274 @@
                             imageUrl:['images/product_row_04_05.jpg','images/product_row_04_05_05.jpg'],
                             title: '質感休閒西裝褲',
                             price: 'NT. 2,600',
+                        },
+                    ],
+                    TypesList: [
+                        {
+                            title: "上身類",
+                            url: "#",
+                            productTypes: [
+                                {
+                                    url: "#",
+                                    linkName: "無袖"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "短袖"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "長袖"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "襯杉"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "外套"
+                                },
+                            ]
+                        },
+                        {
+                            title: "下身類",
+                            url: "#",
+                            productTypes: [
+                                {
+                                    url: "#",
+                                    linkName: "短裙"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "長裙"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "短褲"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "長褲"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "牛仔褲"
+                                }
+                            ]
+                        },
+                        {
+                            title: "連身類",
+                            url: "#",
+                            productTypes: [
+                                {
+                                    url: "#",
+                                    linkName: "泳裝"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "連身褲"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "洋裝"
+                                },
+                            ]
+                        },
+                        {
+                            title: "配飾",
+                            url: "#",
+                            productTypes: [
+                                {
+                                    url: "#",
+                                    linkName: "耳環"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "首飾"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "戒指"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "髮飾"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "帽子"
+                                },
+                            ]
+                        },
+                        {
+                            title: "風格支線",
+                            url: "#",
+                            productTypes: [
+                                {
+                                    url: "#",
+                                    linkName: "法國旅拍系列"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "居家休閒系列"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "電影聯名系列"
+                                },
+                            ]
+                        },
+                        {
+                            title: "優惠活動",
+                            url: "#",
+                            productTypes: [
+                                {
+                                    url: "#",
+                                    linkName: "新品95折"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "兩件798"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "三件7折"
+                                },
+                            ],
+                        },
+                    ],
+                    TypesList_RWD: [
+                        {
+                            name: '上身類',
+                            url: '#',
+                            productTypes: [
+                                {
+                                    url: "#",
+                                    linkName: "無袖"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "短袖"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "長袖"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "襯杉"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "外套"
+                                },
+                            ],
+                        },
+                        {
+                            name: '下身類',
+                            url: '#',
+                            productTypes: [
+                                {
+                                    url: "#",
+                                    linkName: "短裙"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "長裙"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "短褲"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "長褲"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "牛仔褲"
+                                },
+                            ],
+                        },
+                        {
+                            name: '連身類',
+                            url: '#',
+                            productTypes: [
+                                {
+                                    url: "#",
+                                    linkName: "泳裝"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "連身褲"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "洋裝"
+                                },
+                            ]
+                        },
+                        {
+                            name: '配飾',
+                            url: '#',
+                            productTypes: [
+                                {
+                                    url: "#",
+                                    linkName: "耳環"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "首飾"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "戒指"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "髮飾"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "帽子"
+                                },
+                            ],
+                        },
+                        {
+                            name: '風格支線',
+                            url: '#',
+                            productTypes: [
+                                {
+                                    url: "#",
+                                    linkName: "法國旅拍系列"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "居家休閒系列"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "電影聯名系列"
+                                },
+                            ],
+                        },
+                        {
+                            name: '優惠活動',
+                            url: '#',
+                            productTypes: [
+                                {
+                                    url: "#",
+                                    linkName: "新品95折"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "兩件798"
+                                },
+                                {
+                                    url: "#",
+                                    linkName: "三件7折"
+                                },
+                            ],
                         },
                     ],
                 }
