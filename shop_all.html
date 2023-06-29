@@ -84,24 +84,24 @@
         </header>
         <section class="shop_all_page">
             <nav class="shop_all_nav">
-                <div class="large_category" v-for="TypesListTitle in TypesList" :key="">
+                <div class="large_category" v-for="TypesListTitle in TypesList" :key="title">
                     <a :href="TypesList.url">
                         <h3 class="nav_category">{{TypesListTitle.title}}</h3>
                     </a>
                     <div class="nav_category_Details">
-                        <a :href="types.url" v-for="types in TypesListTitle.productTypes" :key="index">{{types.linkName}}</a>
+                        <a :href="types.url" v-for="types in TypesListTitle.productTypes" :key="linkName">{{types.linkName}}</a>
                     </div>
                 </div>
             </nav>
             <nav class="shop_all_nav_rwd">
                 <div class="large_category_rwd_tab" id="category_rwd_tab">
-                    <a :href="type_RWD.url" v-for="type_RWD in TypesList_RWD " :key="">
+                    <a :href="type_RWD.url" v-for="type_RWD in TypesList_RWD " :key="name">
                         <h3 class="nav_category_rwd">{{type_RWD.name}}</h3>
                     </a>
                 </div>
                 <div id="category_details_rwd">
-                    <div class="category_details" v-for="list in TypesList_RWD" :key="">
-                        <a :href="item.url" v-for="item in  list.productTypes" :key="">{{item.linkName}}</a>
+                    <div class="category_details" v-for="list in TypesList_RWD" :key="name">
+                        <a :href="item.url" v-for="item in  list.productTypes" :key="linkName">{{item.linkName}}</a>
                     </div>
                 </div>
                 <script>

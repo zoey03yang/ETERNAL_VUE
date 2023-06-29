@@ -213,35 +213,25 @@
                 <div class="checkout_mode">
                     <span class="mode_name">{{payDetails.eCoupon.modeName}}</span>
                     <select class="choose" v-model="eCouponResult">
-                        <option v-for="option in payDetails.eCoupon.optionsList"  :value="option.value" :key="value">{{option.name}}</option>
-                        <!-- <option>happy</option>
-                        <option>sadmonday</option>
-                        <option>Wednesday</option>
-                        <option>Saturday</option> -->
+                        <option v-for="option in payDetails.eCoupon.optionsList"  :value="option.value" :key="modeName">{{option.name}}</option>
                     </select>
                 </div>
                 <div class="checkout_mode">
                     <span class="mode_name">{{payDetails.deliveryArea.modeName}}</span>
                     <select class="choose" v-model="deliveryAreaResult">
-                        <option v-for="area in payDetails.deliveryArea.optionsList" :value="area.value" :key="name" >{{area.name}}</option>
-                        <!-- <option>中國大陸 China</option>
-                        <option>香港SAR HongKong SAR</option>
-                        <option>澳門SAR Macao SAR</option>
-                        <option>日本 Japan</option>
-                        <option>新加坡 Singapore</option>
-                        <option>馬來西亞 Malaysia</option> -->
+                        <option v-for="area in payDetails.deliveryArea.optionsList" :value="area.value" :key="modeName" >{{area.name}}</option>
                     </select>
                 </div>
                 <div class="checkout_mode">
                     <span class="mode_name">{{payDetails.payment.modeName}}</span>
                     <select class="choose" v-model="paymentResult">
-                        <option  v-for="pay in payDetails.payment.optionsList" :value="pay.value" :key="name">{{pay.name}}</option>
+                        <option  v-for="pay in payDetails.payment.optionsList" :value="pay.value" :key="modeName">{{pay.name}}</option>
                     </select>
                 </div>
                 <div class="checkout_mode">
                     <span class="mode_name">{{payDetails.deliveryWay.modeName}}</span>
                     <select class="choose" v-model="deliveryWayResult">
-                        <option v-for="delivery in payDetails.deliveryWay.optionsList" :key="value" :key="name">{{delivery.name}}</option>
+                        <option v-for="delivery in payDetails.deliveryWay.optionsList" :key="value" :key="modeName">{{delivery.name}}</option>
                     </select>
                 </div>
                 <div class="supermarket_chose">
