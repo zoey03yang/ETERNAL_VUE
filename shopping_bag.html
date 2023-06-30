@@ -126,14 +126,14 @@
             </div>
             <div class="checkout">
                 <div class="checkout_item" id="checkout_id">
-                    <div class="checkout_mode">
-                        <span class="mode_name">{{payDetails.eCoupon.modeName}}</span>
-                        <select class="choose" v-model="eCouponResult">
-                            <option v-for="option in payDetails.eCoupon.optionsList" :value="option.value"
-                                :key="modeName">{{option.name}}</option>
+                    <div class="checkout_mode" v-for="list in formList" :key="list.title">
+                        <span class="mode_name">{{list.title}}</span>
+                        <select class="choose" v-model="list.vModal">
+                            <option v-for="select in list.select" :name="list.title" :value="select"
+                                :key="select[0]">{{select}}</option>
                         </select>
                     </div>
-                    <div class="checkout_mode">
+                    <!-- <div class="checkout_mode">
                         <span class="mode_name">{{payDetails.deliveryArea.modeName}}</span>
                         <select class="choose" v-model="deliveryAreaResult">
                             <option v-for="area in payDetails.deliveryArea.optionsList" :value="area.value"
@@ -153,7 +153,7 @@
                             <option v-for="delivery in payDetails.deliveryWay.optionsList" :key="value" :key="modeName">
                                 {{delivery.name}}</option>
                         </select>
-                    </div>
+                    </div> -->
                     <div class="supermarket_chose">
                         <span class="supermarket_name" v-html="payDetails.supermarketName">
                         </span>
@@ -404,6 +404,28 @@
                             price: "NT. 13,360"
                         }
                     },
+                    formList: [
+                        {
+                            title: '電子折價券',
+                            select: ['tuesday', 'monday','sunday'],
+                            vModal: 'tuesday',
+                        },
+                        {
+                            title: '配送區域',
+                            select: ['台灣本島', '中國','日本', '韓國', '新加坡'],
+                            vModal: '台灣本島',
+                        },
+                        {
+                            title: '付款方式',
+                            select: ['貨到付款', '線上刷卡','LINE PAY'],
+                            vModal: '貨到付款',
+                        },
+                        {
+                            title: '運送方式',
+                            select: ['全家', '7-11','宅配'],
+                            vModal: '全家',
+                        },
+                    ],
                     eCouponResult: "Tuesday",
                     deliveryAreaResult: "Taiwan",
                     paymentResult: "信用卡線上刷卡",
