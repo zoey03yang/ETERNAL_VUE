@@ -125,7 +125,7 @@
                     </ol>
                 </nav>
                 <div class="product_row">
-                    <figure class="product_pic" v-for="item in item" :key="item.title">
+                    <figure class="product_pic" v-for="item in [...item, ...item1, ...item2, ...item3]" :key="item.title">
                         <a href="Product_page.html">
                             <img :src=item.imageUrl[0]>
                         </a>
@@ -133,39 +133,6 @@
                             <figcaption class="product_name">{{ item.title }}</figcaption>
                         </a>
                         <figcaption class="product_price">{{ item.price }}</figcaption>
-                    </figure>
-                </div>
-                <div class="product_row">
-                    <figure class="product_pic" v-for="item in item1" :keys="item.title">
-                        <a href="Product_page.html">
-                            <img :src=item.imageUrl[0]>
-                        </a>
-                        <a href="Product_page.html">
-                            <figcaption class="product_name">{{ item.title}}</figcaption>
-                        </a>
-                        <figcaption class="product_price">{{item.price}}</figcaption>
-                    </figure>
-                </div>
-                <div class="product_row">
-                    <figure class="product_pic" v-for="item in item2" :keys="item.title">
-                        <a href="Product_page.html">
-                            <img :src=item.imageUrl[0]>
-                        </a>
-                        <a href="Product_page.html">
-                            <figcaption class="product_name">{{item.title}}</figcaption>
-                        </a>
-                        <figcaption class="product_price">{{item.price}}</figcaption>
-                    </figure>
-                </div>
-                <div class="product_row">
-                    <figure class="product_pic" v-for="item in item3" :keys="item.title">
-                        <a href="Product_page.html">
-                            <img :src=item.imageUrl[0]>
-                        </a>
-                        <a href="Product_page.html">
-                            <figcaption class="product_name">{{item.title}}</figcaption>
-                        </a>
-                        <figcaption class="product_price">{{item.price}}</figcaption>
                     </figure>
                 </div>
                 <!-- 商品導覽頁數 -->
@@ -655,6 +622,7 @@
                             ],
                         },
                     ],
+                    
                 }
             }
         }).mount('#app')
