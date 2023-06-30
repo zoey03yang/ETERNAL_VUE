@@ -94,123 +94,35 @@
         </div>
         </header>
         <section class="shopping_bag_page">
-            <div class="shopping_all">
-                <div class="shopping_product">
+            <div class="shopping_all" id="shopping_all_id">
+                <div class="shopping_product" v-for="(item,index) in product_info['detail']" :key="item['name']">
                     <div class="product_pic">
-                        <a href="Product_page.html">
-                            <img src="images/product_row_02_04.jpg">
+                        <a :href="product_info['structure']['link']">
+                            <img :src="item['src']">
                         </a>
                     </div>
                     <div class="product_name_about_price">
                         <div class="product_box">
-                            <h4 class="product_name">微皺百搭款休閒襯衫</h4>
+                            <h4 class="product_name">{{item['name']}}</h4>
                             <span class="cancel_icon"><i class="fa-sharp fa-solid fa-circle-xmark"
                                     style="color: #504a59;"></i></span>
                         </div>
                         <div class="product_about">
-                            <span>顏色 白</span>
-                            <span>尺寸 M</span>
+                            <span>{{item['color']}}</span>
+                            <span>{{item['size']}}</span>
                             <div class="product_quantity">
-                                <span>數量</span>
+                                <span>{{product_info['structure']['quantity']}}</span>
                                 <select class="quantity" name="number">
-                                    <option value="1" selected>1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
+                                    <option value="1" 
+                                        v-for="option_value in 5"
+                                        :key="option_value">{{option_value}}</option>
                                 </select>
                             </div>
                         </div>
-                        <p class="product_price">小計 NT.1,600</p>
+                        <p class="product_price">{{item['price']}}</p>
                     </div>
                 </div>
-                <div class="shopping_product">
-                    <div class="product_pic">
-                        <a href="Product_page.html">
-                            <img src="images/product_row_03_01.jpg">
-                        </a>
-                    </div>
-                    <div class="product_name_about_price">
-                        <div class="product_box">
-                            <h4 class="product_name">經典抓皺絲滑長洋裝</h4>
-                            <span class="cancel_icon"><i class="fa-sharp fa-solid fa-circle-xmark"
-                                    style="color: #504a59;"></i></span>
-                        </div>
-                        <div class="product_about">
-                            <span>顏色 深藍</span>
-                            <span>尺寸 S</span>
-                            <div class="product_quantity">
-                                <span>數量</span>
-                                <select class="quantity" name="number">
-                                    <option value="1" selected>1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
-                        </div>
-                        <p class="product_price">小計 NT.3,800</p>
-                    </div>
-                </div>
-                <div class="shopping_product">
-                    <div class="product_pic">
-                        <a href="Product_page.html">
-                            <img src="images/product_row_03_04.jpg">
-                        </a>
-                    </div>
-                    <div class="product_name_about_price">
-                        <div class="product_box">
-                            <h4 class="product_name">修身典雅短洋裝</h4>
-                            <span class="cancel_icon"><i class="fa-sharp fa-solid fa-circle-xmark"
-                                    style="color: #504a59;"></i></span>
-                        </div>
-                        <div class="product_about">
-                            <span>顏色 米白</span>
-                            <span>尺寸 M</span>
-                            <div class="product_quantity">
-                                <span>數量</span>
-                                <select class="quantity" name="number">
-                                    <option value="1" selected>1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
-                        </div>
-                        <p class="product_price">小計 NT.3,200</p>
-                    </div>
-                </div>
-                <div class="shopping_product">
-                    <div class="product_pic">
-                        <a href="Product_page.html">
-                            <img src="images/product_row_03_03.jpg">
-                        </a>
-                    </div>
-                    <div class="product_name_about_price">
-                        <div class="product_box">
-                            <h4 class="product_name">貼膚薄紗夢境洋裝</h4>
-                            <span class="cancel_icon"><i class="fa-sharp fa-solid fa-circle-xmark"
-                                    style="color: #504a59;"></i></span>
-                        </div>
-                        <div class="product_about">
-                            <span>顏色 膚</span>
-                            <span>尺寸 S</span>
-                            <div class="product_quantity">
-                                <span>數量</span>
-                                <select class="quantity" name="number">
-                                    <option value="1" selected>1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
-                        </div>
-                        <p class="product_price">小計 NT.4,200</p>
-                    </div>
-                </div>
+           
             </div>
             <div class="checkout">
                 <div class="checkout_item" id="checkout_id">
