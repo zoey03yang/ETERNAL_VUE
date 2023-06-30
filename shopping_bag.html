@@ -113,7 +113,7 @@
                             <div class="product_quantity">
                                 <span>{{product_info['structure']['quantity']}}</span>
                                 <select class="quantity" name="number">
-                                    <option value="1" 
+                                    <option :value='option_value' 
                                         v-for="option_value in 5"
                                         :key="option_value">{{option_value}}</option>
                                 </select>
