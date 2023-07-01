@@ -125,7 +125,7 @@
                     </ol>
                 </nav>
                 <div class="product_row">
-                    <figure class="product_pic" v-for="item in [...item, ...item1, ...item2, ...item3]" :key="item.title">
+                    <figure class="product_pic" v-for="item in item" :key="item.title">
                         <a href="Product_page.html">
                             <img :src=item.imageUrl[0]>
                         </a>
@@ -272,8 +272,6 @@
                             title: '經典黑色長版風衣',
                             price: 'NT. 4,500',
                         },
-                    ],
-                    item1:[
                         {
                             imageUrl:['images/product_row_02_01.jpg','images/product_row_02_01_01.jpg'],
                             title: '典雅晚宴質感長洋裝',
@@ -299,8 +297,6 @@
                             title: '碎花收腰開岔長洋裝',
                             price: 'NT. 2,800',
                         },
-                    ],
-                    item2:[
                         {
                             imageUrl:['images/product_row_03_01.jpg','images/product_row_03_01_01.jpg'],
                             title: '經典抓皺絲滑長洋裝',
@@ -326,8 +322,6 @@
                             title: '菱格設計針織外套',
                             price: 'NT. 3,200',
                         },
-                    ],
-                    item3:[
                         {
                             imageUrl:['images/product_row_04_01.jpg','images/product_row_04_01_01.jpg'],
                             title: '度假風雲朵連身裙',
