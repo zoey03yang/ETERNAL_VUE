@@ -113,26 +113,40 @@
                             <div class="product_quantity">
                                 <span>{{product_info['structure']['quantity']}}</span>
                                 <select class="quantity" name="number">
-                                    <option :value='option_value' 
-                                        v-for="option_value in 5"
-                                        :key="option_value">{{option_value}}</option>
+                                    <option :value='option_value' v-for="option_value in 5" :key="option_value">
+                                        {{option_value}}</option>
                                 </select>
                             </div>
                         </div>
                         <p class="product_price">{{item['price']}}</p>
                     </div>
                 </div>
-           
+
             </div>
             <div class="checkout">
                 <div class="checkout_item" id="checkout_id">
-                    <div class="checkout_mode" v-for="list in formList" :key="list.title">
+                    <div class="checkout_mode" v-for="list in list" :key="list.modeName">
+                        <span class="modename">
+                            {{list.modeName}}</span>
+                        <select class="choose" v-model="list.model">
+                            <option v-for="select in list.optionsList" :name="select.name" :value="select.value"
+                                :key="select.name">{{select.name}}</option>
+                        </select>
+                    </div>
+                    <!-- <div class="checkout_mode" v-for="list in formList" :key="list.title">
                         <span class="mode_name">{{list.title}}</span>
                         <select class="choose" v-model="list.vModal">
                             <option v-for="select in list.select" :name="list.title" :value="select"
                                 :key="select[0]">{{select}}</option>
                         </select>
-                    </div>
+                    </div> -->
+                    <!-- <div class="checkout_mode" v-for="list in formList" :key="list.title">
+                        <span class="mode_name">{{list.title}}</span>
+                        <select class="choose" v-model="list.vModal">
+                            <option v-for="select in list.select" :name="list.title" :value="select"
+                                :key="select[0]">{{select}}</option>
+                        </select>
+                    </div> -->
                     <!-- <div class="checkout_mode">
                         <span class="mode_name">{{payDetails.deliveryArea.modeName}}</span>
                         <select class="choose" v-model="deliveryAreaResult">
@@ -192,98 +206,97 @@
             </div>
         </footer>
     </div>
-
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
         const app = Vue.createApp({
             data() {
                 return {
-                    HeaderLogo:[
+                    HeaderLogo: [
                         {
-                            url:'index.html',
-                            imageUrl:['logo.png'],
+                            url: 'index.html',
+                            imageUrl: ['logo.png'],
                         },
                     ],
-                    shopAll:[
+                    shopAll: [
                         {
-                            url:'shop_all.html',
-                            title:'所有商品',
+                            url: 'shop_all.html',
+                            title: '所有商品',
                         },
                     ],
-                    newArrival:[
+                    newArrival: [
                         {
-                            url:'shop_all.html',
-                            title:'最新商品',
+                            url: 'shop_all.html',
+                            title: '最新商品',
                         },
                     ],
-                    restock:[
+                    restock: [
                         {
-                            url:'shop_all.html',
-                            title:'熱銷商品',
+                            url: 'shop_all.html',
+                            title: '熱銷商品',
                         },
                     ],
-                    Classification:[
+                    Classification: [
                         {
-                            url:'#',
-                            linkName:'上身類',
+                            url: '#',
+                            linkName: '上身類',
                         },
                         {
-                            url:'#',
-                            linkName:'下身類',
+                            url: '#',
+                            linkName: '下身類',
                         },
                         {
-                            url:'#',
-                            linkName:'連身類',
+                            url: '#',
+                            linkName: '連身類',
                         },
                         {
-                            url:'#',
-                            linkName:'配飾',
+                            url: '#',
+                            linkName: '配飾',
                         },
                         {
-                            url:'#',
-                            linkName:'風格支線',
+                            url: '#',
+                            linkName: '風格支線',
                         },
                         {
-                            url:'#',
-                            linkName:'優惠活動',
-                        },
-                    ],
-                    member:[
-                        {
-                            url:'login.html',
-                            imageUrl:'icon/user.png',
+                            url: '#',
+                            linkName: '優惠活動',
                         },
                     ],
-                    shoppingBag:[
+                    member: [
                         {
-                            url:'shopping_bag.html',
-                            imageUrl:'icon/shopping_bag.png',
+                            url: 'login.html',
+                            imageUrl: 'icon/user.png',
                         },
                     ],
-                    buttonNav:[
+                    shoppingBag: [
                         {
-                            url:'how_to_buy.html',
-                            linkName:'HOW TO BUY',
-                        },
-                        {
-                            url:'#',
-                            linkName:'NOTICE',
-                        },
-                        {
-                            url:'about.html',
-                            linkName:'ABOUT ETERNAL',
-                        },
-                        {
-                            url:'#',
-                            linkName:'FACEBOOK',
-                        },
-                        {
-                            url:'#',
-                            linkName:'INSTAGRAM',
+                            url: 'shopping_bag.html',
+                            imageUrl: 'icon/shopping_bag.png',
                         },
                     ],
-                    payDetails: {
-                        eCoupon: {
+                    buttonNav: [
+                        {
+                            url: 'how_to_buy.html',
+                            linkName: 'HOW TO BUY',
+                        },
+                        {
+                            url: '#',
+                            linkName: 'NOTICE',
+                        },
+                        {
+                            url: 'about.html',
+                            linkName: 'ABOUT ETERNAL',
+                        },
+                        {
+                            url: '#',
+                            linkName: 'FACEBOOK',
+                        },
+                        {
+                            url: '#',
+                            linkName: 'INSTAGRAM',
+                        },
+                    ],
+                    list: [
+                        {
                             modeName: "電子折價卷",
                             optionsList: [
                                 {
@@ -301,11 +314,11 @@
                                 {
                                     name: "Saturday",
                                     value: "Saturday"
-                                },
-
-                            ]
+                                }
+                            ],
+                            model: "Tuesday"
                         },
-                        deliveryArea: {
+                        {
                             modeName: "配送區域",
                             optionsList: [
                                 {
@@ -336,11 +349,10 @@
                                     name: "馬來西亞 Malaysia",
                                     value: "Malaysia"
                                 },
-
-
-                            ]
+                            ],
+                                 model:"Taiwan"
                         },
-                        payment: {
+                        {
                             modeName: "付款方式",
                             optionsList: [
                                 {
@@ -363,10 +375,10 @@
                                     name: "Line Pay",
                                     value: "Line Pay"
                                 },
-
-                            ]
+                            ],
+                            model:"信用卡線上刷卡"
                         },
-                        deliveryWay: {
+                        {
                             modeName: "運送方式",
                             optionsList: [
                                 {
@@ -381,9 +393,11 @@
                                     name: "宅配",
                                     value: "宅配"
                                 },
-
-                            ]
+                            ],
+                            model:"全家取貨付款"
                         },
+                    ],
+                    payDetails: {
                         supermarketName: "012869 全家新竹金竹店 :<br>新竹市北區金竹路115號1樓",
                         priceSum: [
                             {
@@ -404,32 +418,32 @@
                             price: "NT. 13,360"
                         }
                     },
-                    formList: [
-                        {
-                            title: '電子折價券',
-                            select: ['tuesday', 'monday','sunday'],
-                            vModal: 'tuesday',
-                        },
-                        {
-                            title: '配送區域',
-                            select: ['台灣本島', '中國','日本', '韓國', '新加坡'],
-                            vModal: '台灣本島',
-                        },
-                        {
-                            title: '付款方式',
-                            select: ['貨到付款', '線上刷卡','LINE PAY'],
-                            vModal: '貨到付款',
-                        },
-                        {
-                            title: '運送方式',
-                            select: ['全家', '7-11','宅配'],
-                            vModal: '全家',
-                        },
-                    ],
-                    eCouponResult: "Tuesday",
-                    deliveryAreaResult: "Taiwan",
-                    paymentResult: "信用卡線上刷卡",
-                    deliveryWayResult: "全家取貨付款",
+                    // formList: [
+                    //     {
+                    //         title: '電子折價券',
+                    //         select: ['tuesday', 'monday','sunday'],
+                    //         vModal: 'tuesday',
+                    //     },
+                    //     {
+                    //         title: '配送區域',
+                    //         select: ['台灣本島', '中國','日本', '韓國', '新加坡'],
+                    //         vModal: '台灣本島',
+                    //     },
+                    //     {
+                    //         title: '付款方式',
+                    //         select: ['貨到付款', '線上刷卡','LINE PAY'],
+                    //         vModal: '貨到付款',
+                    //     },
+                    //     {
+                    //         title: '運送方式',
+                    //         select: ['全家', '7-11','宅配'],
+                    //         vModal: '全家',
+                    //     },
+                    // ],
+                    // eCouponResult: "Tuesday",
+                    // deliveryAreaResult: "Taiwan",
+                    // paymentResult: "信用卡線上刷卡",
+                    // deliveryWayResult: "全家取貨付款",
                     product_info: {
                         structure: {
                             link: "Product_page.html",
