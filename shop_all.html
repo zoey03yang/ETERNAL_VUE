@@ -125,9 +125,9 @@
                     </ol>
                 </nav>
                 <div class="product_row">
-                    <figure class="product_pic" v-for="item in item" :key="item.title">
+                    <figure class="product_pic" v-for="(item,index) in item" :key="item.title">
                         <a href="Product_page.html">
-                            <img :src=item.imageUrl[0]>
+                            <img :src=item.imageUrl[0] @mouseover="mouseoverImg(item.imageUrl[1],index)" @mouseout="mouseoutImg(index)">
                         </a>
                         <a href="Product_page.html">
                             <figcaption class="product_name">{{ item.title }}</figcaption>
@@ -616,9 +616,19 @@
                             ],
                         },
                     ],
-                    
+                    oldUrl: ''
                 }
-            }
+            },
+            methods: {
+                mouseoverImg(url,index) {
+                    const newUrl = url;
+                    this.oldUrl = this.item[index].imageUrl[0];
+                    this.item[index].imageUrl[0] = newUrl;
+                },
+                mouseoutImg(index) {
+                    this.item[index].imageUrl[0] = this.oldUrl;
+                },
+            },
         }).mount('#app')
     </script>
 </body>

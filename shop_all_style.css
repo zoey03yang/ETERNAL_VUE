@@ -446,6 +446,7 @@ color: #222226;
 }
 .product_pic img{
 width: 100%;
+display: block;
 }
 .product_name{
 margin-top: 5%;
